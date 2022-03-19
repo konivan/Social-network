@@ -4,7 +4,8 @@ import s from './Header.module.css';
 const Header = () => {
   return (
     <header className={s.header}>
-      <img src="https://i.ya-webdesign.com/images/transparent-k-logo-1.png" />
+      <img src="https://2code.info/demo/themes/Discy/Main/wp-content/themes/discy/images/logo.png" />
+      <button className={s.loginBtn}>Log In</button>
     </header>
   );
 }

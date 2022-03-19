@@ -1,8 +1,28 @@
-.descriptionBlock {
-  padding: 10px;
+.nameBlock {
+  position: relative;
+  bottom: 75px;
+  left: 145px;
+
+  font-weight: bolder;
+  font-size: 30px;
 }
 
 .profileAvatar {
-  width: 300px;
-  border-radius: 30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #2d6ff7;
+
+  padding: 3px;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.descriptionBlock {
+  text-align: center;
+  width: 700px;
+  margin-left: 110px;
+
+  font-weight: 600;
+  font-size: 17px;
 }

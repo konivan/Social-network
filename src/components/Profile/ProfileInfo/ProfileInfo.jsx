@@ -5,9 +5,18 @@ const ProfileInfo = (props) => {
   return (
     <div>
       <div>
-        <img className={s.profileAvatar} src="https://avatars.mds.yandex.net/i?id=4ea3fc2a12468d93389e744854cc57ef-5733951-images-thumbs&n=13" />
+        <img
+          className={s.profileAvatar}
+          src="https://pm1.narvii.com/6434/76f7be9908d9640e43bacef97dcb3ea2158430f5_00.jpg"
+        />
+        <div className={s.nameBlock}>Ivan Kondratev</div>
       </div>
-      <div className={s.descriptionBlock}>ava + desc</div>
+      <div className={s.descriptionBlock}>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text when
+        an unknown printer took a galley of type and scrambled it to make a type
+        specimen book.
+      </div>
     </div>
   );
 }

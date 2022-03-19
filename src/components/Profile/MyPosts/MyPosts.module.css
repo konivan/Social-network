@@ -2,6 +2,43 @@
   padding: 10px;
 }
 
+.postsBlock h3 {
+  position: relative;
+  left: 5px;
+  top: 10px;
+
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.postsBlock textarea {
+  outline: none;
+  resize: none;
+  margin: 0 auto;
+
+  border: 2px solid #272930;
+  border-radius: 15px;
+  width: 500px;
+  height: 100px;
+
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+}
+
 .posts {
   margin-top: 10px;
+}
+
+.addPostBtn {
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #f05555;
+
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  line-height: normal;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  padding: 9px 18px;
 }
