@@ -1,13 +1,18 @@
 import React from "react";
 import s from './ProfileInfo.module.css';
+import Preloader from '../../common/preloader';
 
 const ProfileInfo = (props) => {
+  if (!props.profile) {
+    return <Preloader />
+  }
+
   return (
     <div>
       <div>
         <img
           className={s.profileAvatar}
-          src="https://pm1.narvii.com/6434/76f7be9908d9640e43bacef97dcb3ea2158430f5_00.jpg"
+          src={props.profile.photos.large}
         />
         <div className={s.nameBlock}>Ivan Kondratev</div>
       </div>
