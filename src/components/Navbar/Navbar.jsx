@@ -8,47 +8,47 @@ const Navbar = () => {
       <div className={s.item}>
         <NavLink
           to="/profile"
-          className={(link) => (link.isActive ? s.active : s.item)}
+          activeClassName={s.activeLink}
         >
           Profile
         </NavLink>
       </div>
-      <div className={s.item}>
+      <div className={`${s.item} ${s.active}`}>
         <NavLink
           to="/dialogs"
-          className={(link) => (link.isActive ? s.active : s.item)}
+          activeClassName={s.activeLink}
         >
           Messages
         </NavLink>
       </div>
-      <div className={s.item}>
+      <div className={`${s.item} ${s.active}`}>
         <NavLink
           to="/users"
-          className={(link) => (link.isActive ? s.active : s.item)}
+          activeClassName={s.activeLink}
         >
           Users
         </NavLink>
       </div>
-      <div className={s.item}>
+      <div className={`${s.item} ${s.active}`}>
         <NavLink
           to="/news"
-          className={(link) => (link.isActive ? s.active : s.item)}
+          activeClassName={s.activeLink}
         >
           News
         </NavLink>
       </div>
-      <div className={s.item}>
+      <div className={`${s.item} ${s.active}`}>
         <NavLink
           to="/music"
-          className={(link) => (link.isActive ? s.active : s.item)}
+          activeClassName={s.activeLink}
         >
           Music
         </NavLink>
       </div>
-      <div className={s.item}>
+      <div className={`${s.item} ${s.active}`}>
         <NavLink
           to="/settings"
-          className={(link) => (link.isActive ? s.active : s.item)}
+          activeClassName={s.activeLink}
         >
           Settings
         </NavLink>

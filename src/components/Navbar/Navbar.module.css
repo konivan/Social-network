@@ -16,7 +16,8 @@
   padding: 15px;
 }
 
-.item a.active{
+.item a.activeLink{
   color: #2d6ff7;
+  padding: 15px;
 }
 
