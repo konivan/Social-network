@@ -41,14 +41,14 @@ let Users = (props) => {
             </div>
             <div>
               {u.followed ? (
-                <button
+                <button disabled={props.followingInProgress.some( id => id === u.id)}
                   onClick={() => {
-
+                    props.toggleFollowingProgress(true, u.id);
                     axios.delete(
                       `https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,{
                         withCredentials: true,
                         headers: {
-                          "API-KEY": "acb61c3d-96a4-4175-96f8-762ea93278b4"
+                          "API-KEY": "9b7b30ac-4180-4167-9175-88c831e30e93"
                         }
                       }
                     )
@@ -56,6 +56,7 @@ let Users = (props) => {
                       if (response.data.resultCode == 0) {
                         props.unfollow(u.id);
                       }
+                      props.toggleFollowingProgress(false, u.id);
                     });
 
 
@@ -64,13 +65,14 @@ let Users = (props) => {
                   Unfollow
                 </button>
               ) : (
-                <button
+                <button disabled={props.followingInProgress.some( id => id === u.id)}
                   onClick={() => {
+                    props.toggleFollowingProgress(true, u.id);
                     axios.post(
                       `https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {
                         withCredentials: true,
                         headers: {
-                          "API-KEY": "acb61c3d-96a4-4175-96f8-762ea93278b4"
+                          "API-KEY": "9b7b30ac-4180-4167-9175-88c831e30e93"
                         }
                       }
                     )
@@ -78,6 +80,7 @@ let Users = (props) => {
                       if (response.data.resultCode == 0) {
                         props.follow(u.id);
                       }
+                      props.toggleFollowingProgress(false, u.id);
                     });
 
                   }}
